@@ -1,9 +1,8 @@
 Changelog
 =========
 
-2.0.3 (Unreleased)
-------------------
-
+2.0.3 (unreleased)
+-------------
 - Check also for portal_type in the Topic query (not just 'Type').
   [jcbrand]
 
@@ -15,6 +14,9 @@ Changelog
 
 - Add collective.js.fullcalendar as dependency in  metadata.xml
   [jcbrand]
+
+- Add Italian translation
+  [giacomos]
 
 2.0.2 (2011-11-28)
 ------------------
