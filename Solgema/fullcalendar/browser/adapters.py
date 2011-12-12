@@ -318,12 +318,14 @@ class TopicEventSource(object):
         if not query:
             return ({}, [])
 
-        if 'Type' in query.keys():
-            items = getCookieItems(request, 'Type')
-            if items:
-                args['Type'] = items
-            else:
-                args['Type'] = query['Type']
+        for fname in ['portal_type', 'Type']:
+            if fname in query.keys():
+                items = getCookieItems(request, fname)
+                if items:
+                    args[fname] = items
+                else:
+                    args[fname] = query[fname]
+
         filters = []
         #reinit cookies if criterions are no more there
         for criteria in context.listCriteria():
